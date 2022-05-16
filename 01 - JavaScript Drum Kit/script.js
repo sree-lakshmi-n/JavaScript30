@@ -6,7 +6,8 @@ const keys = document.getElementsByClassName("key");
 const audio = document.getElementsByTagName("audio");
 Array.from(keys).forEach((element) => {
   element.addEventListener("click", () => {
-    dataKey = element.getAttribute("data-key");
+    const keyCode = element.getAttribute("data-key");
+
     // Adds 'playing' class for the visual effects
     element.classList.add("playing");
     // Removes 'playing' class after 100ms
