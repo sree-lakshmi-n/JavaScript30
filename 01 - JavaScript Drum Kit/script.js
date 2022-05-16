@@ -16,10 +16,12 @@ Array.from(keys).forEach((element) => {
   });
 });
 // Checking for the audio element with the clicked key keyCode
-// If found, log the keyCode
+// If found, play the sound
 const checkKeyCode = (keyCode) => {
   Array.from(audio).forEach((element) => {
     const audioKey = element.getAttribute("data-key");
-    if (keyCode === audioKey) console.log(audioKey);
+    if (keyCode === audioKey) {
+      element.play();
+    }
   });
 };
